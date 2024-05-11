@@ -17,11 +17,10 @@ public class AttachmentManager : MonoBehaviour
     
     public void Connect(AttachableObject obj, AttachableObject obj2)
     {
-        //Quaternion.Angle()
-        var dir1 = obj.transform.forward + obj.currentJoint.transform.forward;
-        var dir2 = obj2.currentJoint.transform.forward * -1;
-        var direction =
-            obj.transform.rotation = Quaternion.LookRotation(dir1 -dir2);
+        var diff = Quaternion.Inverse(obj.currentJoint.transform.rotation) * obj.transform.rotation;
+
+        var dir2 = Quaternion.LookRotation(obj2.currentJoint.transform.forward * -1);
+        obj.transform.rotation = diff * dir2;
         
         Vector3 newPos = obj2.currentJoint.transform.position - (obj.currentJoint.transform.position - obj.transform.position);
         
