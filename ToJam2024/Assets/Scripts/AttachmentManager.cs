@@ -20,7 +20,7 @@ public class AttachmentManager : MonoBehaviour
         var diff = Quaternion.Inverse(obj.currentJoint.transform.rotation) * obj.transform.rotation;
 
         var dir2 = Quaternion.LookRotation(obj2.currentJoint.transform.forward * -1);
-        obj.transform.rotation = diff * dir2;
+        obj.transform.rotation = dir2 * diff;
         
         Vector3 newPos = obj2.currentJoint.transform.position - (obj.currentJoint.transform.position - obj.transform.position);
         
