@@ -9,6 +9,8 @@ public class CarData : ScriptableObject
     public bool shouldRun = false;
     
 }
+
+
 public class WheelGoZoom : MonoBehaviour
 {
     // private CarData data;
