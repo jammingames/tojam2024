@@ -11,6 +11,7 @@ public class RotateRigidbody : MonoBehaviour
     private float input = 0;
     private bool doPhysics = false;
     private Rigidbody rb;
+    
 
     private void Awake()
     {

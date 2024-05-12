@@ -15,9 +15,12 @@ public class WheelGoZoom : MonoBehaviour
     public float torqueSpeed = 5.0f;
     public bool shouldRun = false;
     private Rigidbody rb;
+
+    public Vector3 TorqueAxis;
+    public float torqueModifier;
+    
     private void Awake()
     {
-        // if (data == null) data = createscrip
         rb = GetComponent<Rigidbody>();
         
     }
@@ -25,6 +28,6 @@ public class WheelGoZoom : MonoBehaviour
     private void FixedUpdate()
     {
         if (!shouldRun) return;
-        rb.AddTorque(1 * torqueSpeed * Time.fixedDeltaTime, 0,0);
+        rb.AddTorque((torqueSpeed * Time.fixedDeltaTime) * (transform.forward * torqueModifier), ForceMode.Impulse );
     }
 }
