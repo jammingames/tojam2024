@@ -9,6 +9,7 @@ public class RocketBooster : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     private Rigidbody rb;
     [SerializeField] private float boosterSpeed = 100f;
     [SerializeField] private Material activeMaterial;
+    [SerializeField] private ParticleSystem particleSystem;
     private Material _originalMaterial;
     private MeshRenderer _meshRenderer;
 
@@ -48,10 +49,12 @@ public class RocketBooster : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         _isActivated = activate;
         if (activate)
         {
+            particleSystem.Play();
             _meshRenderer.material = activeMaterial;
         }
         else
         {
+            particleSystem.Stop();
             _meshRenderer.material = _originalMaterial;
         }
     }

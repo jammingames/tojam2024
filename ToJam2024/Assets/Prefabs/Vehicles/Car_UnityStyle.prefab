@@ -136,11 +136,11 @@ GameObject:
   - component: {fileID: 7083393576765123362}
   m_Layer: 0
   m_Name: Car_UnityStyle
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2274842675973030399
 Transform:
   m_ObjectHideFlags: 0
