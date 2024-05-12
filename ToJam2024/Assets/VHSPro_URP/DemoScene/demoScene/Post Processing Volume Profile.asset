@@ -357,13 +357,13 @@ MonoBehaviour:
     m_Value: 0
   filmGrainAmount:
     m_OverrideState: 1
-    m_Value: 0.28
+    m_Value: 0.049
   signalNoiseOn:
     m_OverrideState: 1
     m_Value: 1
   signalNoiseAmount:
     m_OverrideState: 1
-    m_Value: 0.138
+    m_Value: 0.328
   signalNoisePower:
     m_OverrideState: 1
     m_Value: 0.83
@@ -435,7 +435,7 @@ MonoBehaviour:
     m_Value: 0
   signalAdjustY:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.021
   signalAdjustI:
     m_OverrideState: 1
     m_Value: 0
