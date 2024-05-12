@@ -20,6 +20,8 @@ public class WheelTurner : MonoBehaviour, IPointerDownHandler
     [SerializeField] private bool isUsingDragThrottle;
     [SerializeField] private float rotationMax;
     [SerializeField] private float rotationMin;
+
+    public WheelTurner pairedWheel;
     
     
     [SerializeField] private Material activeMaterial;
@@ -67,13 +69,18 @@ public class WheelTurner : MonoBehaviour, IPointerDownHandler
             float targetPosition =  Mathf.Clamp((startPosition.x - currentPosition.x) * rotateInputMultiplier, rotationMin, rotationMax);
             _spring.targetPosition = targetPosition;
             _hingeJoint.spring = _spring;
-            _horizontalSlider.value = targetPosition;
+
+            if (pairedWheel != null)
+            {
+                pairedWheel.SetSprintTargetPosition(targetPosition);
+            }
+            // _horizontalSlider.value = targetPosition;
 
             if (isUsingDragThrottle)
             {
                 float targetVelocity = startPosition.y - currentPosition.y;
                 // _wheelGoZoom.torqueSpeed = targetVelocity * velocityInputMultiplier;
-                _verticalSlider.value = targetVelocity;
+                // _verticalSlider.value = targetVelocity;
             }
             if (Input.GetMouseButtonUp(0))
             {
@@ -100,5 +107,11 @@ public class WheelTurner : MonoBehaviour, IPointerDownHandler
         _isDragging = true;
         // startPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
         startPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+    }
+
+    public void SetSprintTargetPosition(float targetPosition)
+    {
+        _spring.targetPosition = targetPosition;
+        _hingeJoint.spring = _spring;
     }
 }
