@@ -201,7 +201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6369797661675596302
 Transform:
   m_ObjectHideFlags: 0
@@ -306,7 +306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7844544461493503831
 Transform:
   m_ObjectHideFlags: 0
@@ -452,7 +452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &434208879782058162
 Transform:
   m_ObjectHideFlags: 0
@@ -588,7 +588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5905566222714529701
 Transform:
   m_ObjectHideFlags: 0
@@ -701,7 +701,7 @@ PrefabInstance:
       objectReference: {fileID: 3333178398447149292}
     - target: {fileID: 3362176968061174899, guid: 7c9ea5393ff6a4f45b8b9c0419f6df97, type: 3}
       propertyPath: m_Spring.spring
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3362176968061174899, guid: 7c9ea5393ff6a4f45b8b9c0419f6df97, type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -1410,7 +1410,7 @@ PrefabInstance:
       objectReference: {fileID: 3333178398447149292}
     - target: {fileID: 3362176968061174899, guid: 7c9ea5393ff6a4f45b8b9c0419f6df97, type: 3}
       propertyPath: m_Spring.spring
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3362176968061174899, guid: 7c9ea5393ff6a4f45b8b9c0419f6df97, type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -1578,7 +1578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af82e4b1fc890144eab100f358e55993, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.125
+      value: 0.221
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af82e4b1fc890144eab100f358e55993, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1739,7 +1739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af82e4b1fc890144eab100f358e55993, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.125
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af82e4b1fc890144eab100f358e55993, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1974,7 +1974,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5356561402088111740}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2066,7 +2066,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: f1ebb8619c30b384596884f49520eaba, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d2679b6d916f28440bd10078b27f7af3, type: 2}
+      objectReference: {fileID: 2100000, guid: 020ee1d31a890384d9ac04d8acf96d6f, type: 2}
     - target: {fileID: 919132149155446097, guid: f1ebb8619c30b384596884f49520eaba, type: 3}
       propertyPath: m_Name
       value: Middle_Steel_4
@@ -2106,7 +2106,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5468392340794016818}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2181,7 +2181,7 @@ MonoBehaviour:
   - {fileID: 5772797958033603088}
   throttleOnStart: 0
   allowClick: 1
-  carSpeed: -2
+  carSpeed: -3
   activeMaterial: {fileID: 2100000, guid: 656013c6d56044d9f88e614c081f88ee, type: 2}
 --- !u!1001 &5352894989717547586
 PrefabInstance:
