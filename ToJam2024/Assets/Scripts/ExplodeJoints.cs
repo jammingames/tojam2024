@@ -6,15 +6,20 @@ using Random = System.Random;
 
 public class ExplodeJoints : MonoBehaviour
 {
+    public bool explodeOnStart = false;
     public float delay = 0.5f;
     public float explosiveForce = 5000;
     private IEnumerator Start()
     {
-        yield return new WaitForSeconds(delay);
-        DoExplodeJoints();
+        if (explodeOnStart)
+        {
+            yield return new WaitForSeconds(delay);
+            DoExplodeJoints();    
+        }
+        
     }
 
-    void DoExplodeJoints()
+    public void DoExplodeJoints()
     {
         var joints = GetComponentsInChildren<Joint>();
         foreach (Joint joint in joints)

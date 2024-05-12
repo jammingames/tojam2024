@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 public class CarThrottleController : MonoBehaviour, IPointerClickHandler
 {
     public WheelGoZoom[] _wheelGoZooms;
+    public bool throttleOnStart = true;
+    public bool allowClick = false;
     [SerializeField] private float carSpeed;
     [SerializeField] private Material activeMaterial;
     private MeshRenderer _meshRenderer;
@@ -19,12 +21,13 @@ public class CarThrottleController : MonoBehaviour, IPointerClickHandler
         _meshRenderer = GetComponent<MeshRenderer>();
         
         _originalMaterial = _meshRenderer.material;
-
+        if (throttleOnStart) SetAllThrottles();
 
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (!allowClick) return;
         SetAllThrottles();
         _isActive = !_isActive;
 
@@ -43,15 +46,7 @@ public class CarThrottleController : MonoBehaviour, IPointerClickHandler
     {
         foreach (var wheel in _wheelGoZooms)
         {
-            Debug.Log("CHANGING A WHEEL");
-            if (wheel.torqueSpeed != 0)
-            {
-                wheel.torqueSpeed = 0;
-            }
-            else
-            {
-                wheel.torqueSpeed = carSpeed;
-            }
+            wheel.torqueSpeed = wheel.torqueSpeed == 0 ? carSpeed : 0; //only set if its zero
         }
     }
 }
