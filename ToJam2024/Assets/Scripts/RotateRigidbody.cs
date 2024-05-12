@@ -26,7 +26,6 @@ public class RotateRigidbody : MonoBehaviour
             input = Input.GetAxis("Horizontal");
             if (input != 0)
             {
-                print("rotating " + input);
                 transform.Rotate(axis, input * speed * Time.deltaTime);    
             }
             
