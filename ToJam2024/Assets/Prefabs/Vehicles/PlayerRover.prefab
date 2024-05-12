@@ -151,7 +151,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3473070321760577873}
@@ -171,12 +171,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18fd602c570d15f48b3a2363a496ac1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motorTorque: 1000
-  brakeTorque: 1000
-  maxSpeed: 30
+  motorTorque: 100
+  brakeTorque: 100
+  maxSpeed: 15
   steeringRange: 40
   steeringRangeAtMaxSpeed: 30
-  centreOfGravityOffset: -1
+  centreOfGravityOffset: -0.5
 --- !u!54 &7083393576765123362
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559288977058735487}
   serializedVersion: 4
-  m_Mass: 1300
+  m_Mass: 500
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
