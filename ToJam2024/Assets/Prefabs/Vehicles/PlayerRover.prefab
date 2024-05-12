@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 1515855696808566597}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.275, y: 0, z: 0}
+  m_LocalPosition: {x: -1.206, y: 0.104, z: -0.754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77,7 +77,7 @@ WheelCollider:
   m_GameObject: {fileID: 1515855696808566597}
   serializedVersion: 2
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.38
+  m_Radius: 0.45
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a5ec5a91ec6074c82117e0a0e4c83a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelModel: {fileID: 7685219819765502582}
+  wheelModel: {fileID: 1479054623187818938}
   WheelCollider: {fileID: 0}
   steerable: 0
   motorized: 1
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 9063126407393516776}
   - component: {fileID: 7083393576765123362}
   m_Layer: 0
-  m_Name: Car_UnityStyle
+  m_Name: PlayerRover
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,8 +230,8 @@ Transform:
   m_GameObject: {fileID: 3862054485321101009}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.442, y: 0, z: 0.49}
-  m_LocalScale: {x: 0.89133, y: 0.85174817, z: 2.4874177}
+  m_LocalPosition: {x: -0.004, y: 0.499, z: -0.06}
+  m_LocalScale: {x: 1.272017, y: 0.85174817, z: 2.4874177}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2274842675973030399}
@@ -284,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 7406571890144534605}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.12, y: 0, z: 1.133}
+  m_LocalPosition: {x: 1.251, y: 0.136, z: 0.342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -299,7 +299,7 @@ WheelCollider:
   m_GameObject: {fileID: 7406571890144534605}
   serializedVersion: 2
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.38
+  m_Radius: 0.45
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a5ec5a91ec6074c82117e0a0e4c83a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelModel: {fileID: 3047042742071617825}
+  wheelModel: {fileID: 8607984428307628942}
   WheelCollider: {fileID: 0}
   steerable: 1
   motorized: 0
@@ -372,7 +372,7 @@ Transform:
   m_GameObject: {fileID: 7470792279373689353}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.27499998, y: 0, z: 1.133}
+  m_LocalPosition: {x: -1.254, y: 0.088, z: 0.312}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -387,7 +387,7 @@ WheelCollider:
   m_GameObject: {fileID: 7470792279373689353}
   serializedVersion: 2
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.38
+  m_Radius: 0.45
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a5ec5a91ec6074c82117e0a0e4c83a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelModel: {fileID: 2224774820272756565}
+  wheelModel: {fileID: 3715788337214573539}
   WheelCollider: {fileID: 0}
   steerable: 1
   motorized: 0
@@ -468,6 +468,7 @@ Transform:
   - {fileID: 7881861438390163832}
   - {fileID: 2224774820272756565}
   - {fileID: 3047042742071617825}
+  - {fileID: 3242036245921573882}
   m_Father: {fileID: 2274842675973030399}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &8544724224435205288
@@ -497,7 +498,7 @@ Transform:
   m_GameObject: {fileID: 8544724224435205288}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.12, y: 0, z: 0}
+  m_LocalPosition: {x: 1.12, y: 0.06, z: -0.803}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -512,7 +513,7 @@ WheelCollider:
   m_GameObject: {fileID: 8544724224435205288}
   serializedVersion: 2
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.38
+  m_Radius: 0.45
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -554,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a5ec5a91ec6074c82117e0a0e4c83a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelModel: {fileID: 7881861438390163832}
+  wheelModel: {fileID: 3932604370386778314}
   WheelCollider: {fileID: 0}
   steerable: 0
   motorized: 1
@@ -610,6 +611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wheel_fl
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aafb146e3ae4c934caee8d8693c5b8c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -619,6 +624,88 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aafb146e3ae4c934caee8d8693c5b8c7, type: 3}
   m_PrefabInstance: {fileID: 1825441726415384766}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3131338423389244433
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3473070321760577873}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+      propertyPath: m_Name
+      value: MainRover
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+--- !u!4 &1479054623187818938 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4607771634477536683, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+  m_PrefabInstance: {fileID: 3131338423389244433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3242036245921573882 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+  m_PrefabInstance: {fileID: 3131338423389244433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3715788337214573539 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7429357760743798798, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+  m_PrefabInstance: {fileID: 3131338423389244433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3932604370386778314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2154925565057479899, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+  m_PrefabInstance: {fileID: 3131338423389244433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8607984428307628942 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6629592837908008863, guid: 0404d691da05e954ab982fed6c921c47, type: 3}
+  m_PrefabInstance: {fileID: 3131338423389244433}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3297756736691179210
 PrefabInstance:
@@ -675,6 +762,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: aafb146e3ae4c934caee8d8693c5b8c7, type: 3}
       propertyPath: m_Name
       value: wheel_fr
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aafb146e3ae4c934caee8d8693c5b8c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -738,6 +829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Middle_Steel_4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f1ebb8619c30b384596884f49520eaba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -799,6 +894,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bf57a49a1d995a84e8402d55098a02e2, type: 3}
       propertyPath: m_Name
       value: End_Steel_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bf57a49a1d995a84e8402d55098a02e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -866,6 +965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wheel_rr
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aafb146e3ae4c934caee8d8693c5b8c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -927,6 +1030,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: aafb146e3ae4c934caee8d8693c5b8c7, type: 3}
       propertyPath: m_Name
       value: Wheel_rl
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aafb146e3ae4c934caee8d8693c5b8c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
