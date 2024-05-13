@@ -9,11 +9,7 @@ public class BombBehaviour : MonoBehaviour, IPointerClickHandler
 
     [SerializeField] private Exploder explosionRadius;
     [SerializeField] private GameObject explosionPrefab;
-
-    private void Start()
-    {
-    }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         Grabber grabber = other.gameObject.GetComponent<Grabber>();

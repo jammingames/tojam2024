@@ -11,7 +11,8 @@ public class Grabber : MonoBehaviour
       // SpringJoint springJoint = grabbedObject.AddComponent<SpringJoint>();
       // springJoint.connectedBody = grabbedPointRB;
 
-      grabbedObject.transform.position = grabPosition.position;
+      float yPos = (grabbedObject.GetComponent<Collider>().bounds.size.y * 0.3f) + grabPosition.position.y;
+      grabbedObject.transform.position = new Vector3(grabPosition.position.x, yPos, grabPosition.position.z);
       FixedJoint fixedJoint = grabbedObject.AddComponent<FixedJoint>();
       fixedJoint.connectedBody = grabbedPointRB;
 
