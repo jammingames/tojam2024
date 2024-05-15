@@ -263,16 +263,16 @@ MonoBehaviour:
   g_pixel: 1
   g_color: 1
   g_palette: 1
-  g_crt: 1
-  g_noise: 1
+  g_crt: 0
+  g_noise: 0
   g_jitter: 1
   g_signal: 1
   g_feedback: 1
-  g_extra: 0
-  g_bypass: 0
+  g_extra: 1
+  g_bypass: 1
   pixelOn:
-    m_OverrideState: 1
-    m_Value: 1
+    m_OverrideState: 0
+    m_Value: 0
   screenResPresetId:
     m_OverrideState: 1
     m_Value: 16
@@ -283,7 +283,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 720
   colorOn:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   colorMode:
     m_OverrideState: 1
@@ -310,7 +310,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   ditherOn:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   ditherMode:
     m_OverrideState: 1
@@ -320,7 +320,7 @@ MonoBehaviour:
     m_Value: 0.3
   paletteOn:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 0
   paletteId:
     m_OverrideState: 1
     m_Value: 11
@@ -467,17 +467,17 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: {r: 1, g: 0.5, b: 0, a: 1}
   feedbackDebugOn:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   feedbackMode: 0
   independentTimeOn:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   bypassOn:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   bypassTex:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {fileID: 0}
     dimension: 1
 --- !u!114 &5183749012159139934

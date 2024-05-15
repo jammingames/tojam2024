@@ -12,19 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ca6b7c2e2b40a98c5a2e06db8c0811, type: 3}
   m_Name: SceneData
   m_EditorClassIdentifier: 
+  bootStrapScene:
+    sceneAsset: {fileID: 102900000, guid: bc43138ff7d2d430ca108b7c49732556, type: 3}
+    loadAdditive: 0
+    scenePath: Assets/Scenes/StartHere.unity
   startScene:
-    sceneAsset: {fileID: 102900000, guid: a41fa7ca466c643d3898693d05aa1efa, type: 3}
+    sceneAsset: {fileID: 102900000, guid: e7ba108331a8e431181c6fb55705e647, type: 3}
+    loadAdditive: 0
     scenePath: Assets/Scenes/Main.unity
-  gameScene:
-    sceneAsset: {fileID: 102900000, guid: b49392ffc431fb74e861f7cfd6b348a7, type: 3}
-    scenePath: Assets/Scenes/TestGame_Sam.unity
+  gameScenes:
+  - sceneAsset: {fileID: 102900000, guid: 0e7678637b0ac8b478fbdf0badbfa319, type: 3}
+    loadAdditive: 0
+    scenePath: Assets/Scenes/Level1.unity
+  - sceneAsset: {fileID: 102900000, guid: 40c625a66ff4348078b69f1064d8fa70, type: 3}
+    loadAdditive: 0
+    scenePath: Assets/Scenes/Level2.unity
   gameOverScene:
     sceneAsset: {fileID: 102900000, guid: f10ab09411f4943829b479748ee9942c, type: 3}
+    loadAdditive: 1
     scenePath: Assets/Scenes/GameOverScene.unity
   summaryScene:
     sceneAsset: {fileID: 102900000, guid: e9975a9556f89429da96cbccd416226a, type: 3}
+    loadAdditive: 1
     scenePath: Assets/Scenes/SummaryScene.unity
   uiScene:
     sceneAsset: {fileID: 102900000, guid: c0880d197db5c4912a0c509643fc9806, type: 3}
+    loadAdditive: 1
     scenePath: Assets/Scenes/UIScene.unity
-  test: 0

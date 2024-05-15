@@ -1,65 +1,102 @@
 using System;
+using System.Collections;
+using GrandpaSamUtils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneViewController : MonoBehaviour
+public class SceneViewController : PersistentSingleton<SceneViewController>
 {
     
+   
+    private bool isLoading = false;
     [SerializeField] private SceneData sceneData;
-    private void Awake()
+    private SceneReference currentScene;
+
+
+    protected override void Awake()
     {
+        base.Awake();
+        GameManager.OnGameStateChange += OnGameStateChange;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        Debug.Log("I am waking up and I am the SceneViewController");
     }
 
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        GameManager.OnGameStateChange += OnGameStateChange;
-    }
-    private void OnDisable()
+    private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
         GameManager.OnGameStateChange -= OnGameStateChange;
+        
     }
 
     private void OnGameStateChange(GameState state)
     {
+        if (sceneData == null) return;
         switch (state)
         {
             case GameState.MainMenu:
-                SceneManager.LoadScene(sceneData.startScene);
-                break;
-            case GameState.Game:
-                SceneManager.LoadScene(sceneData.gameScene);
+                LoadScene(sceneData.startScene);
                 break;
             case GameState.GameOver:
-                SceneManager.LoadScene(sceneData.gameOverScene);
+                LoadScene(sceneData.gameOverScene);
                 break;
             case GameState.Summary:
-                SceneManager.LoadScene(sceneData.summaryScene);
+                LoadScene(sceneData.summaryScene);
                 break;
             case GameState.Pause:
                 break;
-            default:
-                throw new ArgumentOutOfRangeException(nameof(state), state, null);
+            
+                
         }
     }
 
-    private void LoadScene(SceneReference scene)
+
+    public void LoadScene(SceneReference scene, Action onComplete = null)
     {
-        if (scene.loadAdditive)
-        {
-            SceneManager.LoadScene(scene, LoadSceneMode.Additive);
-        }
-        else
-        {
-            SceneManager.LoadScene(scene);
-        }
+        if (isLoading) return;
+        LoadSceneMode mode = scene.loadAdditive ? LoadSceneMode.Additive : LoadSceneMode.Single;
+        StartCoroutine(LoadAsync(scene, mode, onComplete));
+    }
+    public void LoadGameScene(SceneReference scene)
+    {
+        LoadScene(scene, () => GameManager.StartGame());
+        currentScene = scene;
+        if (SceneManager.GetSceneByPath(sceneData.uiScene.ScenePath).isLoaded) return;
+        SceneManager.LoadSceneAsync(sceneData.uiScene.ScenePath, LoadSceneMode.Additive);
         
+    }
+
+    public void ResetScene(SceneReference scene = null)
+    {
+        if (scene == null) scene = currentScene;
+        if (currentScene == null) scene = sceneData.startScene;
+        if (SceneManager.GetSceneByPath(scene.ScenePath).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(scene.ScenePath);
+            StartCoroutine(LoadAsync(scene, LoadSceneMode.Additive, null));
+        }
+            
+    }
+
+    private IEnumerator LoadAsync(SceneReference scene, LoadSceneMode loadSceneMode, Action onComplete = null)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene.ScenePath, loadSceneMode);
+        
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            isLoading = true;
+            yield return null;
+        }
+
+        currentScene = scene;
+        isLoading = false;
+        onComplete?.Invoke();
     }
    
     
     private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
+        Debug.Log("OnSceneLoaded Callback happening from SceneViewController: " + arg0.name);
         //dunno what to do, scene is loaded, start state i guess?
     }
 }

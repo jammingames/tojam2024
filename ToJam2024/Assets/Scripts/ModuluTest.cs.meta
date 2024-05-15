@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 236861177b10424f93a4699ce5b37f93
+guid: 579fa9db56460484db14a4a949019c95
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - sceneData: {fileID: 11400000, guid: 881b7ff46dea0496fa7b1de653c177c3, type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
